@@ -15,10 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var dpHora: UIDatePicker!
     
     @IBAction func btGuardar(sender: AnyObject) {
-        sAMedicamento.append(tfMedicamento.text!)
-        sANotas.append(tfNotas.text!)
-        sADate.append(dpHora.date)
+        if tfMedicamento.hasText(){
+            
+            sAMedicamento.append(tfMedicamento.text!)
+            sANotas.append(tfNotas.text!)
+            sADate.append(dpHora.date)
+            tfMedicamento.text = ""
+            tfNotas.text = ""
+            
+            let alert = UIAlertController(title: "Exito!",message: "Datos Guardados",preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         
+        }else {
+            let alert = UIAlertController(title: "Datos",message: "Faltan Datos",preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Revisar", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()

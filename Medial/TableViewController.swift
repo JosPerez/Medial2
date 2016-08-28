@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
     @IBOutlet var tvAlarmas: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
 
@@ -33,11 +33,32 @@ class TableViewController: UITableViewController {
         return sAMedicamento.count
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default ,reuseIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TableViewCell
         
-        cell.textLabel?.text = sAMedicamento[indexPath.row]
+        cell.lblMedicamento.text = sAMedicamento[indexPath.row]
+        cell.lblNotas.text = sANotas[indexPath.row]
+        let dateForm = NSDateFormatter()
+        dateForm.dateFormat = "h : mm a"
+        let dateString = dateForm.stringFromDate(sADate[indexPath.row])
+        cell.lblDate.text = String(dateString)
         
         return cell
+    }
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(editingStyle == UITableViewCellEditingStyle.Delete)
+        {
+            sAMedicamento.removeAtIndex(indexPath.row)
+            sANotas.removeAtIndex(indexPath.row)
+            sADate.removeAtIndex(indexPath.row)
+            
+            NSUserDefaults.standardUserDefaults().setObject(sAMedicamento, forKey: "Medicamento")
+            NSUserDefaults.standardUserDefaults().setObject(sANotas, forKey: "Notas")
+            NSUserDefaults.standardUserDefaults().setObject(sADate, forKey: "Hora")
+            
+            tvAlarmas.reloadData()
+        }
+        
     }
     override func viewDidAppear(animated: Bool) {
         

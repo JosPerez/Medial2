@@ -15,6 +15,8 @@
 		0719C6A61D723EE30061C01B /* MedialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719C6A51D723EE30061C01B /* MedialTests.swift */; };
 		0719C6B11D723EE30061C01B /* MedialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719C6B01D723EE30061C01B /* MedialUITests.swift */; };
 		0719C6C41D724D530061C01B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0719C6C31D724D530061C01B /* TableViewController.swift */; };
+		077797BB1D7265B4003FA408 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077797BA1D7265B4003FA408 /* TableViewCell.swift */; };
+		077797BD1D728298003FA408 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077797BC1D728298003FA408 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0719C6B01D723EE30061C01B /* MedialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedialUITests.swift; sourceTree = "<group>"; };
 		0719C6B21D723EE30061C01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0719C6C31D724D530061C01B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		077797BA1D7265B4003FA408 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		077797BC1D728298003FA408 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 				0719C6901D723EE20061C01B /* AppDelegate.swift */,
 				0719C6921D723EE20061C01B /* ViewController.swift */,
 				0719C6C31D724D530061C01B /* TableViewController.swift */,
+				077797BA1D7265B4003FA408 /* TableViewCell.swift */,
+				077797BC1D728298003FA408 /* ProfileViewController.swift */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0719C6931D723EE20061C01B /* ViewController.swift in Sources */,
+				077797BB1D7265B4003FA408 /* TableViewCell.swift in Sources */,
+				077797BD1D728298003FA408 /* ProfileViewController.swift in Sources */,
 				0719C6C41D724D530061C01B /* TableViewController.swift in Sources */,
 				0719C6911D723EE20061C01B /* AppDelegate.swift in Sources */,
 			);
@@ -497,6 +505,7 @@
 				0719C6B71D723EE30061C01B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0719C6B81D723EE30061C01B /* Build configuration list for PBXNativeTarget "MedialTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +514,7 @@
 				0719C6BA1D723EE30061C01B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0719C6BB1D723EE30061C01B /* Build configuration list for PBXNativeTarget "MedialUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +523,7 @@
 				0719C6BD1D723EE30061C01B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
